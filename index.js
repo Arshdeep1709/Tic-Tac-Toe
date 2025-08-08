@@ -45,7 +45,7 @@ const boxes = document.getElementsByClassName('box');
 Array.from(boxes).forEach((box)=>{
     let boxText = box.querySelector('.box-text');
     box.addEventListener('click', ()=>{
-        if(boxText.innerText === ''){
+        if(boxText.innerText === '' && ! isgameOver){
             boxText.innerText = turn;
             checkWin();
             if(! isgameOver){
